@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emmet's STEM Learning Program </title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- this is the bootstrap that we will be using this time, which is different from the previous one-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- this is the font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<!-- external stylesheets -->
+<!-- Just have this custom css here in this section just for additional styling -->
+
+<style>  
+  /* Custom CSS for hover effect */
+  .card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+</style>
+<body style="background-image: url('backgroundwhite.jpg'); background-size: cover; background-position: center;">
+
+<!-- navigation of all the tabs/sections and the title of my website will be here -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Emmet's STEM Learning Program</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" onclick="toggleAboutSection(false)">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about" onclick="toggleAboutSection(true)">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#courses" onclick="toggleCoursesSection(true)">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#instructors" onclick="toggleInstructorsSection(true)">Instructors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" onclick="toggleContactSection(true)">Contact</a>
+        </li>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--hero section -->
+<!-- this hero section is the prominent, visually striking section of the webpage -->
+<!-- this is at the top of the page and is designed to grab the user's attention -->
+
+<section id="hero" class="text-center py-5" style="background-image: url('laptop2.jpg'); background-size: cover; background-position: center;">
+  <div class="container">
+    <h1 class="display-4 font-weight-bold text-white" style="text-shadow: 2px 2px 4px black;">Welcome to Emmet's STEM Learning Program</h1>
+    <p class="lead font-weight-bold text-white" style="text-shadow: 2px 2px 4px black;">Explore our wide range of courses and start learning today!</p>
+    <a href="#courses" class="btn btn-primary btn-lg">Browse Courses</a>
+  </div>
+</section>
+
+
+<!-- instructors section -->
+<!-- so the instructors section showcases who we be teaching the courses of Emmet's STEM Learning Program -->
+<section id="instructors" class="py-5" style="display: none;">
+  <div class="container">
+    <h2 class="text-center">Our Instructors</h2>
+    <div class="row">
+
+      <!-- 1st Instructor -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="instructor1.jpg" class="card-img-top" alt="STEM Instructor 1">
+          <div class="card-body">
+            <h5 class="card-title">Linda Saito</h5>
+            <p class="card-text">Linda is an accomplished artist, art educator and She has a Master of Fine Arts degree from the Unveristy of Brighton and specializes in painting and sculpture  </p>
+          </div>
+        </div>
+      </div>
+
+         <!-- 2nd Instructor -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="instructor2.jpg" class="card-img-top" alt="STEM Instructor 2">
+          <div class="card-body">
+            <h5 class="card-title">John Neill</h5>
+            <p class="card-text">John is a distinguished fashion designer with a wealth of experience in the industry. He earned his Bachelor's degree in Product Design from Newcastle University.</p>
+          </div>
+        </div>
+      </div>
+
+         <!-- 3rd Instructor -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="instructor3.jpg" class="card-img-top" alt="STEM Instructor 3">
+          <div class="card-body">
+            <h5 class="card-title">Emma Taylor</h5>
+            <p class="card-text">Emma is a renowned fashion designer with years of experience in the industry and an award-winning photographer specializing in portrait and landscape photography. </p>
+          </div>
+        </div>
+      </div>
+
+       <!-- 4th Instructor -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="instructor4.jpg" class="card-img-top" alt="Art Instructor 1">
+          <div class="card-body">
+            <h5 class="card-title">Michael Thompson</h5>
+            <p class="card-text">Michael is a game design expert with a HND in software engineering. He has worked on several successful game projects such as Ubisoft and teaches game development courses.</p>
+          </div>
+        </div>
+      </div>
+
+       <!-- 5th Instructor -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="instructor5.jpg" class="card-img-top" alt="Design Instructor 1">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Jessica Martinez</h5>
+            <p class="card-text">Jessica is a computer engineer specializing in hardware design. She holds a Ph.D. in Electrical Engineering from Unviersity of Sheffield and has expertise in microprocessor architecture.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6th Instructor -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="instructor6.jpg" class="card-img-top" alt="Photography Instructor 1">
+          <div class="card-body">
+            <h5 class="card-title">Prof. David Harris</h5>
+            <p class="card-text"> David is a computer scientist specializing in artificial intelligence. He holds a Ph.D. in Computer Science from Unviersity Of Cambridge and has developed many innovative AI algorithms.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7th Instructor -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="instructor7.jpg" class="card-img-top" alt="Game Design Instructor 1">
+          <div class="card-body">
+            <h5 class="card-title">Chris Roberts</h5>
+            <p class="card-text">Chris is a financial consultant, With a Bachelor's degree in Accounting from the Unviersity Of Leeds, Simon brings a unique blend of quantitative skills and financial expertise.</p>
+          </div>
+        </div>
+      </div>
+
+         <!-- 8th Instructor -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="insturctor8.jpg" class="card-img-top" alt="Computer Engineering Instructor 1">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Manuel García</h5>
+            <p class="card-text"> Manuel is a mathematics professor with a passion for teaching and research. He earned his Ph.D. in Mathematics from the University of Madrid and specializes in advanced mathematical concepts. </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9th Instructor -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="instructor9.jpg" class="card-img-top" alt="Accounting Instructor 1">
+          <div class="card-body">
+            <h5 class="card-title">Li Na Wang</h5>
+            <p class="card-text">Li Na Wang is a certified public accountant specializing in tax planning and financial analysis. She has a Bachelor's  degree in Accounting from The University of Hong Kong. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- this is the about section information describing what our website is about -->
+<section id="about" class="py-5" style="display: none;">
+  <div class="container">
+    <h2 class="text-center text-dark mb-5">About Us</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="text-dark mb-4" style="font-size: 18px;">
+          <strong style="color: black;">We as a team</strong> <span style="color: black ;">our dedicated to providing high-quality education to learners worldwide. Our mission is to empower individuals to achieve their academic and professional goals through accessible and engaging online courses.
+        </p>
+        <p class="text-dark mb-4"style="font-size: 18px;">
+          <strong style="color: black;">At Emmet's Learning Program</strong> <span style="color: black;">we believe in the transformative power of education. That's why we offer a diverse range of courses taught by experienced instructors who are passionate about their fields. Whether you're looking to enhance your skills, explore new interests, or advance your career, we have something for you.
+        </p>
+        <p class="text-dark mb-4"style="font-size: 18px;">
+          <strong style="color: black;">Our courses</strong> <span style="color: black;">are designed to be flexible and convenient, allowing you to learn at your own pace from anywhere in the world. With interactive content, hands-on exercises, and personalized support, we're here to help you succeed.
+        </p>
+        <p class="text-dark"style="font-size: 18px;">
+          <strong style="color: black;">Join our community today</strong> <span style="color: black ;">and take the next step towards achieving your learning goals with Emmet's Learning Program.
+        </p>
+      </div>
+      <div class="col-md-6 mt-md-0 mt-4">
+        <!-- Video Embed -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <video controls class="embed-responsive-item">
+            <source src="AboutVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!-- here is where we have placed a video into the about section-->
+      </div>
+    </div>
+  
+
+
+
+   <!-- this is the statistics, achievements and accreditations section about our page-->
+<div class="row mt-5">
+  <!-- statistics and achievements -->
+  <div class="col-md-6">
+    <div class="card bg-light p-4">
+      <h3 class="text-center mb-4">Statistics or Achievements</h3>
+      <ul class="list-unstyled">
+        <li class="mb-3">
+          <strong class="text-primary">Number of Students Enrolled:</strong>
+          <span id="enrolledStudents" class="float-right font-weight-bold">12,342</span>
+        </li>
+        <li class="mb-3">
+          <strong class="text-primary">Completion Rate:</strong>
+          <span id="completionRate" class="float-right font-weight-bold">90%</span>
+        </li>
+        <li class="mb-3">
+          <strong class="text-primary">Job Placement Rate:</strong>
+          <span id="jobPlacementRate" class="float-right font-weight-bold">83%</span>
+        </li>
+        <li>
+          <strong class="text-primary">Awards and Recognitions:</strong>
+          <ul class="pl-3">
+            <li>Best Online Learning Platform Award 2023</li>
+            <li>Outstanding Educational Achievement Award 2022</li>
+          </ul>
+        </li>
+      <!-- image of our award to show users that we are authentic and trustworthy-->
+<div class="text-center mt-4">
+  <img src="award.png" alt="Awards Image" class="img-fluid" style="max-width: 100px;">
+</div>
+    </div>
+  </div>
+
+   <!-- this is for accreditations -->
+  <div class="col-md-6">
+    <div class="card bg-light p-4">
+      <h3 class="text-center mb-4">Accreditations</h3>
+      <div class="accordion" id="accreditationsAccordion">
+        <div class="card">
+          <div class="card-header" id="accreditationOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link text-primary" type="button" data-toggle="collapse" data-target="#collapseAccreditationOne" aria-expanded="true" aria-controls="collapseAccreditationOne">
+                Accreditation 1
+              </button>
+            </h5>
+          </div>
+          <div id="collapseAccreditationOne" class="collapse show" aria-labelledby="accreditationOne" data-parent="#accreditationsAccordion">
+            <div class="card-body">
+              Accreditation 1 is a recognition of our commitment to providing high-quality education. It signifies that our programs meet rigorous standards set by accrediting bodies.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="accreditationTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link text-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseAccreditationTwo" aria-expanded="false" aria-controls="collapseAccreditationTwo">
+                Accreditation 2
+              </button>
+            </h5>
+          </div>
+          <div id="collapseAccreditationTwo" class="collapse" aria-labelledby="accreditationTwo" data-parent="#accreditationsAccordion">
+            <div class="card-body">
+              Accreditation 2 represents our partnership with industry leaders to develop and deliver relevant, up-to-date curriculum that meets industry standards.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- now for this section this will be FAQs which is users getting the anwers to the questions they might have related to the courses -->
+
+<!-- this is the 1st question -->
+<div class="row mt-5">
+  <div class="col-md-12">
+    <h3 class="mb-4 text-center text-l">FAQs</h3>
+    <div class="accordion" id="faqAccordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Question 1: What courses do you offer?
+            </button>
+          </h5>
+        </div>
+        <!-- this is the 1st answer -->
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+          <div class="card-body">
+            We offer a wide range of courses in various subjects such as technology, business, arts, and more. Our catalog includes beginner to advanced level courses, and more. You can explore our course catalog to find the perfect fit for your learning goals.
+          </div>
+        </div>
+      </div>
+      <!-- this is the 2nd question -->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Question 2: How can I enroll in a course?
+            </button>
+          </h5>
+        </div>
+         <!-- this is the 2nd answer -->
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+          <div class="card-body">
+            You can enroll in a course by visiting our website and selecting the course you're interested in. From there, you'll be guided through the enrollment process, which is quick and easy.
+          </div>
+        </div>
+      </div>
+       <!-- this is the 3rd question -->
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Question 3: Can I access course materials offline?
+            </button>
+          </h5>
+        </div>
+         <!-- this is the 3rd answer -->
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+          <div class="card-body">
+            Yes, you can access course materials offline by downloading them through our mobile app. This allows you to continue learning even when you're not connected to the internet.
+          </div>
+        </div>
+      </div>
+         <!-- this is the 4th question -->
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Question 4: Do you offer any discounts or promotions?
+            </button>
+          </h5>
+        </div>
+           <!-- this is the 4th answer -->
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+          <div class="card-body">
+            Yes, we frequently offer discounts and promotions on our courses. Keep an eye on our website and subscribe to our newsletter to stay updated on the latest deals.
+          </div>
+        </div>
+      </div>
+        <!-- this is the 5th question -->
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Question 5: Can I get a refund if I'm not satisfied with the course?
+            </button>
+          </h5>
+        </div>
+          <!-- this is the 5th answer -->
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+          <div class="card-body">
+            Yes, we offer a satisfaction guarantee. If you're not satisfied with a course, you can request a refund within [number of days] of enrollment.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of FAQs Section -->
+
+  </div>
+</section>
+
+
+
+
+<!-- this is the featured homepage section -->
+
+ <!-- this is the 1st image and text describing the standard level of teaching that we offer -->
+<section id="home" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div id="image1" style="background-image: url('lecturer.jpg'); height: 300px; background-size: cover;"></div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-white mb-4"><strong><span style="color: black;">High-Quality Teaching</span></strong></h2>
+        <p class="lead text-white"><strong><span style="color: black;">Experience top-notch instruction from industry experts decidated to your success. Our decidation to high qulaity teaching is at the heart of everythingwe do, we belive that effective education 
+        goes beyond just delivering information its about inspiring minds fostering critcial thinking and empowering indivduals to reach their full potential. 
+        with innovative teaching methods, intercative content and personalized gudiance, 
+        we're here to help you unlock new levsl of knowedge and achieve your academia and professional goals. </span></strong></p>
+      </div>
+    </div>
+
+    <!-- bold horizontal line -->
+    <hr class="my-4 bg-white" style="border-top: 4px solid;">
+
+    <!-- this is the 2nd image and text covering the skills that students will learn -->
+<div class="row">
+  <div class="col-md-6">
+    <h2 class="text-white mb-4"><strong><span style="color: black;">Learn Valuable Skills</span></strong></h2>
+    <p class="lead text-white"><strong><span style="color: black;">Our comprehensive curriculum is designed to equip you with the practical skills and knowledge 
+      needed to excel in your field. 
+      From technical expertise to problem-solving abilities, our courses cover a wide range of topics 
+      to ensure that you develop the competencies necessary to thrive in today's fast-paced world. 
+      Whether you're looking to advance your career,
+       explore new opportunities, or simply enhance your skill set, 
+       our courses provide the perfect platform for achieving your learning goals.</span></strong></p>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div id="image2" style="background-image: url('computestudent.jpg'); height: 300px; background-size: cover;"></div>
+  </div>
+</div>
+
+<!-- bold horizontal line -->
+<hr class="my-4 bg-white" style="border-top: 4px solid;">
+
+
+
+ <!-- this is the last image and text showing students the benefits of choosing one of our courses -->
+<div class="row">
+  <div class="col-md-6 mb-4">
+    <div id="image3" style="background-image: url('graduation.jpg'); height: 300px; background-size: cover;"></div>
+  </div>
+  <div class="col-md-6">
+    <h2 class="text-white mb-4"><strong><span style="color: black;">Career Growth</span></strong></h2>
+    <p class="lead text-white"><strong><span style="color: black;">Completing Emmet's Learning Courses opens up new career opportunities and personal growth. 
+      Our industry-recognized certifications validate your skills and expertise, giving you a competitive edge in the job market. 
+      Our courses provide the knowledge and credentials you need to succeed.
+       We're committed to helping you achieve your professional goals 
+       and realize your full potential.</span></strong></p>
+  </div>
+</div>
+
+<!-- bold horizontal line -->
+<hr class="my-4 bg-white" style="border-top: 4px solid;">
+</section>
+
+
+
+<!-- this is the upcoming events section -->
+<section id="events" class="py-5">
+  <div class="container">
+
+     <!-- title will be here -->
+    <h2 class="text-black mb-4"><strong><span style="color: black;">Upcoming Events</span></strong></h2>
+    <div class="row">
+      <div class="col-md-6">
+
+         <!-- this is the event card 1 -->
+        <div class="card text-white bg-primary mb-3">
+          <img src="python.png" class="card-img-top img-thumbnail" alt="Python Programming Basics" style="max-width: 100px;">
+          <div class="card-header">Python Programming Basics</div>
+          <div class="card-body">
+            <h5 class="card-title">Learn the fundamentals of python programming.</h5>
+            <p class="card-text">Date: June 15, 2024</p>
+            <p class="card-text">Time: 10:00 AM - 12:00 PM</p>
+            <p class="card-text">Location: Penguin Coding, New York, USA</p>
+           
+            <a href="#" class="btn btn-light">Select</a>
+          </div>
+        </div>
+
+         <!-- this is the event card 2 -->
+        <div class="card text-white bg-primary mb-3">
+          <img src="tech.png" class="card-img-top img-thumbnail" alt="Tech Industry Professionals" style="max-width: 100px;">
+          <div class="card-header">Tech Industry Professionals</div>
+          <div class="card-body">
+            <h5 class="card-title">Insights from professionals in the tech industry.</h5>
+            <p class="card-text">Date: July 27, 2024</p>
+            <p class="card-text">Time: 2:00 PM - 6:00 PM</p>
+            <p class="card-text">Location: Olympia Events, London, Uk</p>
+        
+            <a href="#" class="btn btn-light">Select</a>
+          </div>
+        </div>
+      </div>
+
+
+       <!-- this is the event card 3 -->
+      <div class="col-md-6">
+        <div class="card text-white bg-primary mb-3">
+          <img src="marketing.png" class="card-img-top img-thumbnail" alt="Mastering Digital Marketing" style="max-width: 100px;">
+          <div class="card-header">Mastering Digital Marketing</div>
+          <div class="card-body">
+            <h5 class="card-title">Learn advanced strategies for digital marketing.</h5>
+            <p class="card-text">Date: July 5, 2024</p>
+            <p class="card-text">Time: 9:00 AM - 1:00 PM</p>
+            <p class="card-text">Location: Virtual Press Conference</p>
+      
+            <a href="#" class="btn btn-light">Select</a>
+          </div>
+        </div>
+
+         <!-- this is the event card 4 -->
+        <div class="card text-white bg-primary mb-3">
+          <img src="creativewriting.png" class="card-img-top img-thumbnail" alt="Creative Writing Workshop" style="max-width: 100px;">
+          <div class="card-header">Creative Writing Workshop</div>
+          <div class="card-body">
+            <h5 class="card-title">Explore your creativity in this hands-on workshop.</h5>
+            <p class="card-text">Date: August 10, 2024</p>
+            <p class="card-text">Time: 3:00 PM - 5:00 PM</p>
+            <p class="card-text">Location: Community Center, Los Angeles, USA</p>
+            
+            <a href="#" class="btn btn-light">Select</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- here is the student success stories section -->
+<section id="success-stories" class="py-5">
+  <div class="container">
+    <h2 class="text-black mb-4"><strong><span style="color: black;">Student Success Stories</span></strong></h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+
+        <!-- card 1 - this is the container for the image and text-->
+        <div class="card bg-light">
+
+           <!-- image goes here-->
+          <img src="girl.png" class="card-img-top student-img" alt="Sarah Dillon">
+          <div class="card-body">
+            <h5 class="card-title">Sarah Dillon</h5>
+
+                <!-- testimonial -->
+            <p class="card-text">"Emmet's Learning Program provided me with the skills and knowledge I needed to excel in my field. 
+              The instructors were knowledgeable and supportive, and the hands-on learning approach helped me apply what I learned in real-world situations.
+               Thanks to this program, I was able to advance in my career and achieve my professional goals."</p>
+               
+            <!-- joining date -->
+            <p class="card-text"><small class="text-muted">Joined Emmet's STEM Learning Program in 2022</small></p>
+
+              <!-- read more button -->
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+
+       <!-- card 2 - this is the container for the image and text-->
+      <div class="col-md-6 mb-4">
+        <div class="card bg-light">
+
+          <!-- image goes here-->
+          <img src="boy.png" class="card-img-top student-img" alt="Anthony Smith">
+          <div class="card-body">
+            <h5 class="card-title">Anthony Smith</h5>
+
+            <!-- testimonial -->
+              <p class="card-text">"Enrolling in Emmet's Learning Program was one of the best decisions I've ever made.
+                 The comprehensive curriculum and engaging instructors helped me develop valuable skills that I use in my job every day. 
+                 The program's flexible schedule allowed me to balance my studies with work and family responsibilities.
+                  I highly recommend this program to anyone looking to further their education and career."</p>
+
+             <!-- joining date -->
+            <p class="card-text"><small class="text-muted">Joined Emmet's STEM Learning Program in 2023</small></p>
+
+            <!-- read more button -->
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- courses section  -->
+
+
+
+<section id="courses" class="py-5" style="display: none;">
+  <div class="container">
+
+    <!-- title -->
+    <h2 class="text-center mb-5">Courses</h2>
+
+    <!-- course categories -->
+    <div class="row mb-4">
+
+       <!-- art design section -->
+      <div class="col-md-4">
+        <div class="card">
+          <!-- category image -->
+          <img src="art design.jpg" class="card-img-top" alt="Category 1">
+          <div class="card-body">
+            <!-- category title -->
+            <h5 class="card-title">Art Design</h5>
+            <!-- category description -->
+            <p class="card-text">"Transform ideas into masterpieces with this design and art oriented course."</p>
+              <!-- view courses button -->
+            <a href="#" class="btn btn-primary">View Courses</a>
+          </div>
+        </div>
+      </div>
+
+       <!-- photography section-->
+      <div class="col-md-4">
+        <div class="card">
+
+           <!-- category image -->
+          <img src="photo.jpg" class="card-img-top" alt="Category 2">
+          <div class="card-body">
+             <!-- category title -->
+            <h5 class="card-title">Photography</h5>
+            <!-- category description -->
+            <p class="card-text">"Pick this if you want to Capture Moments and Create Memories."</p>
+             <!-- view courses button -->
+            <a href="#" class="btn btn-primary">View Courses</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- fashsion design section -->
+      <div class="col-md-4">
+        <div class="card">
+            <!-- category image -->
+          <img src="fashsion design.jpg" class="card-img-top" alt="Category 3">
+          <div class="card-body">
+            <!-- category title -->
+            <h5 class="card-title">Fashion Design</h5>
+             <!-- category description -->
+            <p class="card-text">"Discover your style and embrace the World of fashion design."</p>
+              <!-- view courses button -->
+            <a href="#" class="btn btn-primary">View Courses</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- popular courses -->
+
+
+    <!-- title -->
+    <h3 class="text-center mb-4">Popular Courses</h3>
+    <div class="row">
+
+       <!-- game design section-->
+      <div class="col-md-4">
+        <div class="card">
+        <!-- course image -->
+          <img src="gamedesignstudent-ezgif.com-webp-to-jpg-converter.jpg" class="card-img-top" alt="Game Design">
+          <div class="card-body">
+         <!-- course title -->
+            <h5 class="card-title">Game Design</h5>
+          <!-- course description -->
+            <p class="card-text">"Master the art of building and making your own video game."</p>
+          <!-- enroll now button -->
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+
+        <!-- computer engineering section -->
+      <div class="col-md-4">
+        <div class="card">
+          <!-- course image -->
+          <img src="Cs.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+             <!-- course title -->
+            <h5 class="card-title">Computer Engineering</h5>
+            <!-- course description -->
+            <p class="card-text">"Want to know how to program and develop software."</p>
+            <!-- enroll now button -->
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- accounting and finance section-->
+      <div class="col-md-4">
+        <div class="card">
+            <!-- course image -->
+          <img src="accounting student.jpg" class="card-img-top" alt="Course 3">
+          <div class="card-body">
+             <!-- course title -->
+            <h5 class="card-title">Accounting and Finance</h5>
+            <!-- course description -->
+            <p class="card-text">"Navigate the world of numbers with Confidence. "</p>
+            <!-- enroll now button -->
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- contact section -->
+<section id="contact" class="py-5" style="display: none;">
+  <div class="container">
+    <h2 class="text-center">Contact Us</h2>
+    <form id="enrollForm" onsubmit="showSuccessMessage()">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+
+
+              <!-- full name -->
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" pattern="[A-Za-z\s]+" title="Please enter only alphabetic characters" required>
+          </div>
+
+            <!-- email -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address" required>
+          </div>
+
+           <!-- phone -->
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" pattern="[0-9]{11}" title="Please enter a 10-digit phone number" required>
+          </div>
+
+            <!-- date of birth -->
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" required>
+          </div>
+
+           <!-- gender -->
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender" required>
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+              <option value="prefer_not_to_say">Prefer not to say</option>
+            </select>
+          </div>
+
+             <!-- religion -->
+          <div class="form-group">
+            <label for="religion">Religion</label>
+            <select class="form-control" id="religion" required>
+              <option value="">Select Religion</option>
+              <option value="Christianity">Roman Catholic</option>
+              <option value="Christianity">Protestant</option>
+              <option value="Islam">Islam</option>
+              <option value="Hinduism">Hinduism</option>
+              <option value="Buddhism">Buddhism</option>
+              <option value="Other">Other</option>
+              <option value="None">None</option>
+            </select>
+          </div>
+        </div>
+
+           <!-- office info -->
+        <div class="col-md-6">
+          <div class="office-info" style="margin-top: 20px;">
+            <h4>Office Address</h4>
+            <p>BT1, Belfast, Northern Ireland</p>
+            <h4>Mobile</h4>
+            <p>+07394 129950</p>
+            <h4>Email</h4>
+            <p>EmmetSTEMLearningProgram@gmail.com</p>
+            <!-- Add your image or map here -->
+            <img src="map.png" alt="Office Location" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+          <!-- additional fields -->
+      <div class="row">
+        <div class="col-md-6">
+
+            <!-- address -->
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter your address" pattern="[A-Za-z\s]+" title="Please enter only alphabetic characters" required>
+          </div>
+
+          <!-- postcode -->
+          <div class="form-group">
+            <label for="postcode">Postcode</label>
+            <input type="text" class="form-control" id="postcode" placeholder="Enter your postcode" pattern="[A-Za-z]{1,2}[0-9]{1,2} ?[0-9][A-Za-z]{2}" title="Please enter a valid postcode" required>
+          </div>
+
+           <!-- city -->
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter your city" pattern="[A-Za-z ]*" title="Please enter letters only" required>
+          </div>
+
+          <!-- nationality -->
+          <div class="form-group">
+            <label for="nationality">Nationality</label>
+            <select class="form-control" id="nationality" required>
+              <option value="">Select Nationality</option>
+              <option value="Northern Irish">Northern Irish</option>
+              <option value="Irish">Irish</option>
+              <option value="British">British</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+           <!-- course of interest -->
+          <div class="form-group">
+            <label for="course">Course of Interest</label>
+            <select class="form-control" id="course" required>
+              <option value="">Select Course</option>
+              <option value="Art">Art</option>
+              <option value="Fashion Design">Fashion Design</option>
+              <option value="Photography">Photography</option>
+              <option value="Game Design">Game Design</option>
+              <option value="Computer Engineering">Computer Engineering</option>
+              <option value="Accounting & Finance">Accounting & Finance</option>
+            </select>
+          </div>
+        </div>
+
+           <!-- additional comments -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="message">Additional Comments (Optional)</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+          </div>
+        </div>
+      </div>
+
+       <!-- submit button -->
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </div>
+
+    <!-- success message -->
+  <div id="successMessage" class="alert alert-success" style="display: none;">
+    Submission successful!
+  </div>
+</section>
+
+<script>
+  // the function to display a success message
+  function showSuccessMessage() {
+    alert("Submission successful!");
+  }
+</script>
+
+
+<!-- this section contains a contact form where users can input their details such as name, email, phone number, etc. 
+     upon submission, a success message is displayed.
+     the section is initially hidden and will
+     only be displayed when needed. -->
+
+<form id="enrollForm" onsubmit="showSuccessMessage()">
+
+
+
+<!-- footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p>&copy; 2024 Emmet's STEM Learning Program. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- and finally this is the bootstrap JS and jQuery links -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

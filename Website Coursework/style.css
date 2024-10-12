@@ -1,0 +1,118 @@
+
+/* this resets margin, padding, and box-sizing for all elements to ensure consistent rendering across different browsers.*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* this is the navigation styles, it defines the appearance of the navigation bar.*/
+nav {
+  background-color: #333; /* 
+  color: #fff;  */
+}
+
+/* container: this defines styles for the main container holding the content.*/
+.container {
+  max-width: 1200px; /* sets the maximum width of the container */
+  margin: 0 auto; /* centers the container horizontally */
+  padding: 0 20px; /* adds padding to the left and right sides of the container */
+  display: flex; /* displays the container as a flexbox */
+  justify-content: space-between; /* aligns items along the main axis with space between */
+  align-items: center; /* aligns items along the cross axis at the center */
+}
+
+/* logo: helps to define styles for the logo within the navigation.*/
+.logo {
+  font-size: 24px; /* sets the font size of the logo */
+}
+
+/* 
+navigation links: this is the styles for the navigation links.*/
+.nav-links {
+  list-style-type: none; /* removes the default list bullet */
+  display: flex; /* displays the links as a flexbox */
+}
+
+.nav-links li {
+  margin-right: 20px; /* adds margin to the right side of each navigation link */
+}
+
+.nav-links li a {
+  text-decoration: none; /* removes underline from links */
+  color: #fff; 
+}
+
+/* 
+dropdown menu: this displays the styles for dropdown menus within the navigation.*/
+.dropdown {
+  position: relative; /* sets the positioning context for dropdown content */
+}
+
+.dropdown-content {
+  display: none; /* hides the dropdown content by default */
+  position: absolute; /* positions the dropdown content absolutely */
+  background-color: #333; 
+  min-width: 200px; /* sets the minimum width of the dropdown content */
+  z-index: 1; /* sets the stacking order of the dropdown content */
+}
+
+.dropdown-content a {
+  padding: 10px; /* adds padding to the dropdown links */
+  display: block; /* displays the links as block elements */
+  text-decoration: none; /* removes underline from links */
+  color: #fff; 
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* displays the dropdown content when hovering over the dropdown */
+}
+
+/* 
+section styles: defines styles for sections of content.*/
+section {
+  padding: 50px 0; /* adds padding above and below each section */
+  text-align: center; /* aligns text to the center within each section */
+}
+
+section h2 {
+  margin-bottom: 30px; /* adds margin at the bottom of section headings */
+}
+
+/* call-to-action button styles: this is the styles for call-to-action buttons.*/
+.cta-button {
+  display: inline-block; /* displays the button as an inline-block element */
+  padding: 10px 20px; /* adds padding to the button */
+  background-color: #007bff; 
+  color: #fff; 
+  text-decoration: none; /* removes underline from the button text */
+  border-radius: 5px; /* adds rounded corners to the button */
+  transition: background-color 0.3s ease; 
+}
+
+.cta-button:hover {
+  background-color: #0056b3; 
+}
+
+/* footer styles: defines styles for the footer.*/
+footer {
+  background-color: #f4f4f4;
+  padding: 20px 0; /* adds padding above and below the footer */
+  text-align: center; /* aligns text to the center within the footer */
+}
+
+/* event card styles: defines styles for event cards.*/
+.event-card {
+  height: 100%; /* sets a fixed height for all event cards */
+}
+
+.student-img {
+  height: 300px; /* this sets the height of student images within event cards */
+  object-fit: cover; /* ensures images maintain aspect ratio and cover the entire container */
+}
+
+.card-img-top {
+  height: 300px; /* this sets the height of images within event cards */
+  object-fit: cover; /* ensures images maintain aspect ratio and cover the entire container */
+}
